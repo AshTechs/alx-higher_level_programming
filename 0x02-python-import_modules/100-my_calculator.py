@@ -2,13 +2,27 @@
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     import sys
-    if len(sys.argv) - 1 != 3:
+
+    if len(sys.argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
-    ops = {"+": add, "-": sub, "*": mul, "/": div}
-    if sys.argv[2] not in list(ops.keys()):
+
+    operator = sys.argv[2]
+    if operator not in ops:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
-    x = int(sys.argv[1])
-    y = int(sys.argv[3])
-    print("{} {} {} = {}".format(x, sys.argv[2], y, ops[sys.argv[2]](x, y)))
+
+    try:
+        x = int(sys.argv[1])
+        y = int(sys.argv[3])
+    except ValueError:
+        print("Both <a> and <b> should be integers")
+        sys.exit(1)
+
+    if operator == "/" and y == 0:
+        print("Cannot divide by zero")
+        sys.exit(1)
+
+    ops = {"+": add, "-": sub, "*": mul, "/": div}
+    result = ops[operator](x, y)
+    print("{} {} {} = {}".format(x, operator, y, result))
