@@ -5,6 +5,6 @@ def magic_calculation(x, y):
         z = add(x, y)
         for a in range(4, 6):
             z = add(z, a)
-        return (z)
-    else:
-        return sub(x, y)
+            return (z)
+        else:
+            return sub(x, y)
