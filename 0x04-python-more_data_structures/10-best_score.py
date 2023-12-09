@@ -1,8 +1,15 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    max_score = None
-    for key, value in a_dictionary.items():
-        if value > max_score or max_score is None:
+    if not a_dictionary:
+        return None
+
+   score = 0
+ value in a_dictionary.values():
+        if value > max_score:
             max_score = value
-            best_key = key
-    return best_key
+
+    for key, value in a_dictionary.items():
+        if value == max_score:
+            return key
+
+    return None
