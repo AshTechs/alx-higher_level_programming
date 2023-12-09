@@ -1,9 +1,6 @@
 #!/usr/bin/python3
-def roman_to_int(roman_string):
-    if not isinstance(roman_string, str):
-        return 0
-
-    num_map = {
+def roman_to_int(roman_string: str) -> int:
+    roman_values = {
         'I': 1,
         'V': 5,
         'X': 10,
@@ -13,11 +10,10 @@ def roman_to_int(roman_string):
         'M': 1000
     }
 
-    total = 0
-    for char in roman_string:
-        if char in num_map:
-            total += num_char]
-        else:
-            return 0
+    nums = []
 
-    return total
+    for char in roman_string:
+        if char in roman_values:
+            nums.append(roman_values[char])
+
+ sum(nums)
