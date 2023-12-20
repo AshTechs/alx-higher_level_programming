@@ -2,5 +2,5 @@
 
 """A module for square"""
 class Square:
-    """Represents a square."""
+    """This Represents a square."""
     pass
