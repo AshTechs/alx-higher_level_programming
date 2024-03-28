@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-This module fetches the value of the variable X-Request-Id from the response header using requests package.
+This module fetches the value of the variable X-Request-Id 
+from the response header using requests package.
 """
 
 import requests

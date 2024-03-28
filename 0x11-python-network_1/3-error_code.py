@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This module fetches the body of a response from a given URL using urllib package and handles HTTP errors.
+Fetches the bdy of a respns frm a gvn URL using urllib pckg & hndls HTTP errors
 """
 
 import urllib.request

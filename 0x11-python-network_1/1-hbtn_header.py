@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This module fetches the X-Request-Id variable from the header of a response using urllib package.
+Fetches X-Request-Id variable frm the header of a response using urllib package
 """
 
 import urllib.request
