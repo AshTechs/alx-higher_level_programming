@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This module sends a POST request to a given URL with an email parameter using urllib package.
+Sends a POST request to a given URL with email parameter using urllib package
 """
 
 import urllib.request
