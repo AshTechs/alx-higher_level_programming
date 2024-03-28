@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This module retrieves the user ID using GitHub API with Basic Authentication.
+Retrieves the user ID using GitHub API with Basic Authentication.
 """
 
 import requests
@@ -20,7 +20,8 @@ def get_github_id(username, password):
         None
     """
     url = "https://api.github.com/user"
-    response = requests.get(url, auth=(username, password))
+    headers = {"Authorizatio": f"token {password}"
+    response = requests.get(url, headers=headers)
     data = response.json()
     print(data['id'])
 
