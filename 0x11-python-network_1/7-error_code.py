@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This module fetches the body of a response from a given URL using requests package and handles HTTP errors.
+Fetches bdy of response frm a gvn URL using requests pckg & handles HTTP errors
 """
 
 import requests

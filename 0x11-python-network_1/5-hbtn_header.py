@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 
 """
-This module fetches the value of the variable X-Request-Id 
-from the response header using requests package.
+Ftchs the vlue of the varbl X-Request-Id frm the respns hdr using requests pckg
 """
 
 import requests

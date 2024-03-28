@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This module sends a POST request to a given URL with an email parameter using requests package.
+Snds POST request to a gvn URL with an email parameter using requests package
 """
 
 import requests

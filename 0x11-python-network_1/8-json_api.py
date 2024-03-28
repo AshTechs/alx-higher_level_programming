@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This module sends a POST request to http://0.0.0.0:5000/search_user with a letter as a parameter.
+Sends POST request to http://0.0.0.0:5000/search_user with letter as prmtr
 """
 
 import requests
@@ -10,7 +10,7 @@ import sys
 
 def search_user(letter):
     """
-    Sends a POST request to http://0.0.0.0:5000/search_user with the letter as a parameter.
+    Sends POST request 2 http://0.0.0.0:5000/search_user with letter as prmtr
 
     Args:
         letter (str): The letter to search for.

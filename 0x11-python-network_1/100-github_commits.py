@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This module retrieves information about a given repository using requests package.
+Retrieves information about a given repository using requests package
 """
 
 import requests
