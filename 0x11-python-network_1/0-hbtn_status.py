@@ -8,26 +8,9 @@ import urllib.request
 import urllib.error
 import sys
 
+url = 'https://alx-intranet.hbtn.io/status'
 
-def fetch_status(url):
-    """
-    Fetches the status from the given URL using urllib.
-
-    Args:
-        url (str): The URL to fetch the status from.
-
-    Returns:
-        str: The status fetched from the URL.
-    """
-    try:
-        with urllib.request.urlopen(url) as response:
-            status = response.read().decode('utf-8')
-            print("- Body response:")
-            print("\t- type: {}".format(type(status)))
-            print("\t- content: {}".format(status))
-    except urllib.error.URLError as e:
-        print(e.reason)
-
-
-if __name__ == "__main__":
-    fetch_status("https://alx-intranet.hbtn.io/status")
+req = urllib.request.Request(url)
+with urllib.request.urlopen(req) as response:
+    for line in response:
+        print('- {}'.format(line.decode('utf-8').strip()))
