@@ -19,10 +19,10 @@ def fetch_status(url):
     """
     try:
         with urllib.request.urlopen(url) as response:
-            status = response.read().decode('utf-8')
+            status = response.read()
             print("- Body response:")
             print("\t- type: {}".format(type(status)))
-            print("\t- content: {}".format(status))
+            print("\t- content: {}".format(status.decode('utf-8')))
     except urllib.error.URLError as e:
         print(e.reason)
 
