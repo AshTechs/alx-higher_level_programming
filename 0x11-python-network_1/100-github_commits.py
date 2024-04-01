@@ -1,20 +1,16 @@
 #!/usr/bin/python3
-
 """
 This script lists 10 commits (from most recent to oldest) of a given repositor
 """
-
 import sys
 import requests
 
 def list_commits(repo_name, owner_name):
     """
     Lists 10 commits (from the most recent to oldest) of a given repository
-
     Args:
         repo_name (str): The name of the repository.
         owner_name (str): The owner of the repository.
-
     Returns:
         None
     """
