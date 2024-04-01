@@ -20,9 +20,10 @@ def fetch_status_with_requests(url):
     content_type = response.headers.get('Content-Type', 'Unknown')
     content = response.text
 
-    print("Body response:$")
-    print("\t- type: {}".format(type(content)) + "$")
-    print("\t- content: {}".format(content) + "$")
+    print("Body response:")
+    print("\t- type: {}".format(type(content)))
+    print("\t- content: {}".format(content)) 
 
 if __name__ == "__main__":
     fetch_status_with_requests("https://alx-intranet.hbtn.io/status")
+
