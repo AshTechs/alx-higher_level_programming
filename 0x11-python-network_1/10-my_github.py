@@ -1,40 +1,27 @@
 #!/usr/bin/python3
 
 """
-This script fetches the user ID using GitHub API with Basic Authentication
+Takes GitHub credentials and displays the user's id using the GitHub API
 """
 
-import sys
 import requests
+import sys
 
-def get_github_user_id(username, token):
-    """
-    Fetches GitHub user ID for the given username using a personal access token
+def get_github_user_id(username, password):
+    # API endpoint to get user information
+    url = 'https://api.github.com/user'
 
-    Args:
-        username (str): GitHub username.
-        token (str): Personal access token (password).
-
-    Returns:
-        str: GitHub user ID.
-    """
-    try:
-        g = Github(login_or_token=token)
-        user = g.get_user(username)
-        return user.id
-    except Exception as e:
-        print(f"Error fetching user ID: {e}")
-        return None
-
-if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: python3 github_user_id.py <username> <access_token>")
-        sys.exit(1)
-
-    username, access_token = sys.argv[1], sys.argv[2]
-    user_id = get_github_user_id(username, access_token)
-
-    if user_id:
-        print(f"GitHub user ID for {username}: {user_id}")
+    # Basic authentication using personal access token
+    response = requests.get(url, auth=(username, password))
+    
+    if response.status_code == 200:
+        user_id = response.json().get('id')
+        print(f"User ID: {user_id}")
     else:
         print("Failed to retrieve user ID. Check your credentials.")
+
+if __name__ == "__main__":
+    username = sys.argv[1]
+    password = sys.argv[2]
+    
+    get_github_user_id(username, password)
