@@ -6,7 +6,6 @@ This script fetches the user ID using GitHub API with Basic Authentication
 
 import sys
 import requests
-from github import Github
 
 def get_github_user_id(username, token):
     """
