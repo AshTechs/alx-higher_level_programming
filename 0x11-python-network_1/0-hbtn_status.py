@@ -35,3 +35,4 @@ def fetch_status(url):
 
 if __name__ == "__main__":
     fetch_status("https://alx-intranet.hbtn.io/status")
+
