@@ -22,8 +22,7 @@ def fetch_status_with_requests(url):
 
     print("Body response:")
     print("\t- type: {}".format(type(content)))
-    print("\t- content: {}".format(content)) 
+    print("\t- content: {}".format(content))
 
 if __name__ == "__main__":
     fetch_status_with_requests("https://alx-intranet.hbtn.io/status")
-
