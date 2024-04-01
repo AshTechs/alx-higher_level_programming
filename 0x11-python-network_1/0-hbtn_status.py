@@ -19,12 +19,15 @@ def fetch_status(url):
     """
     try:
         with urllib.request.urlopen(url) as response:
-            status = response.read()
-            print("- Body response:")
-            print("\t- type: {}".format(type(status)))
-            print("\t- content: {}".format(status.decode('utf-8')))
+            content = response.read()
+            utf8_content = content.decode('utf-8')
     except urllib.error.URLError as e:
         print(e.reason)
+    else:
+        print("Body response:")
+        print("\t- type: {}".format(type(content)))
+        print("\t- content: {}".format(content))
+        print("\t- utf8 content: {}".format(utf8_content))
 
 if __name__ == "__main__":
     fetch_status("https://alx-intranet.hbtn.io/status")
