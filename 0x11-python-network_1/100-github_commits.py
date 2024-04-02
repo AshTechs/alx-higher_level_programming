@@ -7,6 +7,7 @@ Lists 10 commits (from the most recent to oldest) of a given repository
 import sys
 import requests
 
+
 def list_commits(repo_name, owner_name):
     """
     Lists 10 commits (from the most recent to oldest) of a given repository.
@@ -30,8 +31,8 @@ def list_commits(repo_name, owner_name):
     else:
         print("Error:", response.text)
 
+
 if __name__ == "__main__":
     repo_name = sys.argv[1]
     owner_name = sys.argv[2]
     list_commits(repo_name, owner_name)
-
