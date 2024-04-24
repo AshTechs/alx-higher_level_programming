@@ -1,0 +1,12 @@
+#!/usr/bin/node
+
+const request = require('request');
+// Import the 'request' module.
+
+request.get(process.argv[2])
+// Use the 'request' module to perform an HTTP GET request to the URL.
+
+  .on('response', function (response) {
+
+    console.log(`code: ${response.statusCode}`);
+  });
